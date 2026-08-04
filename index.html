@@ -3,138 +3,321 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LORES | Gestão de Marcas - Representação comercial de moda infantil no Sul de Minas</title>
-<meta name="description" content="Construindo marcas fortes. Desenvolvendo lojistas de sucesso. Representação comercial de moda infantil no Sul de Minas Gerais: Grupo Marlan (Marlan, Milli&amp;Nina, Ioluigi), Pingo Lelê e Life Jeans.">
+<title>LORES | Gestão de Marcas - Representação de moda infantil no Sul de Minas</title>
+<meta name="description" content="Construindo marcas fortes. Desenvolvendo lojistas de sucesso. Representação e gestão de marcas de moda infantil no Sul de Minas Gerais: Grupo Marlan, Pingo Lelê e Life Jeans. Atacado para lojistas.">
+<meta name="theme-color" content="#0f2547">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #faf9f2; color: #2b2b2b; line-height: 1.6; }
-header { background: #ffffff; color: #2b2b2b; padding: 40px 20px 32px; text-align: center; border-bottom: 4px solid #2b2b2b; }
-header .logo { display: block; margin: 0 auto; width: 330px; max-width: 82%; height: auto; }
-header .tagline { margin-top: 18px; margin-bottom: 0; color: #555; font-size: 1.05em; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-main { max-width: 760px; margin: 0 auto; padding: 30px 20px; }
-section { margin-bottom: 42px; }
-h2 { border-bottom: 2px solid #2b2b2b; padding-bottom: 8px; }
-h3 { margin-bottom: 2px; margin-top: 26px; }
-h3 + p { margin-top: 4px; }
-.marcas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 18px; }
-.marca { flex: 1 1 170px; background: #fff; border: 1px solid #e8e0d2; border-radius: 8px; padding: 26px 16px; display: flex; align-items: center; justify-content: center; min-height: 150px; }
-.marca img { max-width: 170px; max-height: 100px; width: auto; height: auto; display: block; }
-.diferenciais { list-style: none; padding-left: 0; }
-.diferenciais li { padding-left: 28px; position: relative; margin-bottom: 8px; }
-.diferenciais li:before { content: "\2713"; color: #128C7E; font-weight: bold; position: absolute; left: 0; }
-.valores { padding-left: 22px; }
-.valores li { margin-bottom: 6px; }
-.sobre { display: flex; gap: 26px; align-items: flex-start; flex-wrap: wrap; margin-top: 18px; }
-.sobre-foto { flex: 0 0 190px; text-align: center; }
-.sobre-foto img { width: 190px; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #e8e0d2; display: block; }
-.sobre-foto .nome { display: block; font-weight: bold; margin-top: 12px; }
-.sobre-foto .cargo { display: block; color: #666; font-size: 0.9em; }
-.sobre-texto { flex: 1 1 300px; }
-.sobre-texto p:first-child { margin-top: 0; }
-.btn-whats { display: inline-block; background: #25D366; color: #fff; text-decoration: none; font-weight: bold; padding: 14px 26px; border-radius: 30px; margin-top: 10px; }
-.aviso { background: #fff; border-left: 4px solid #128C7E; padding: 14px 18px; margin-top: 16px; }
-footer { background: #2b2b2b; color: #cfc9be; text-align: center; padding: 26px 20px; font-size: 0.88em; }
-footer a { color: #fff; }
+:root{
+  --navy:#0f2547;
+  --navy-deep:#0a1a34;
+  --navy-soft:#1b3b6b;
+  --off:#f8f9fa;
+  --white:#ffffff;
+  --wa:#25d366;
+  --wa-dark:#1da851;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#e6e8ec;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(15,37,71,.08);
+  --shadow-hover:0 16px 40px rgba(15,37,71,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.container{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 45%,var(--navy-soft) 100%);color:#fff;padding:64px 0 76px;overflow:hidden;text-align:center}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.10),transparent 45%),radial-gradient(circle at 85% 85%,rgba(37,211,102,.14),transparent 40%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+.logo-chip{display:inline-block;background:#fff;border-radius:14px;padding:20px 30px;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.logo-chip img{width:260px;max-width:64vw}
+.hero h1{font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.2;font-weight:800;margin:30px 0 10px;letter-spacing:-.5px}
+.hero .tagline{font-size:clamp(1rem,2.4vw,1.22rem);color:#d5e0f0;font-weight:500;margin:0 auto 8px;max-width:600px}
+.hero .sub{color:#a9bcd8;font-size:.98rem;margin:14px auto 30px;max-width:620px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:1.02rem;text-decoration:none;padding:16px 30px;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 26px rgba(37,211,102,.32)}
+.btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 16px 32px rgba(37,211,102,.42)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;margin-top:34px;color:#c3d2e8;font-size:.9rem;font-weight:500}
+.hero-badges span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--wa);flex:none}
+
+/* SECTIONS */
+.section{padding:72px 0}
+.section-alt{background:var(--off)}
+.eyebrow{text-transform:uppercase;letter-spacing:1.6px;font-size:.76rem;font-weight:700;color:var(--wa-dark)}
+.section h2{font-size:clamp(1.45rem,3.4vw,2.05rem);font-weight:800;letter-spacing:-.4px;margin:8px 0 12px;color:var(--navy)}
+.section .lead{color:var(--muted);max-width:660px;margin:0 0 34px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* PERFIL */
+.perfil{display:grid;grid-template-columns:230px 1fr;gap:34px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.perfil-foto img{width:230px;height:280px;object-fit:cover;object-position:center 18%;border-radius:14px}
+.perfil h3{margin:0;font-size:1.3rem;color:var(--navy);font-weight:800}
+.perfil .cargo{color:var(--wa-dark);font-weight:600;font-size:.95rem;margin:2px 0 12px}
+.perfil p{margin:0 0 12px;color:#374151}
+.perfil .local{display:inline-flex;align-items:center;gap:8px;background:var(--off);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.9rem;color:var(--muted);font-weight:500}
+
+/* MARCAS */
+.grid-marcas{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card-marca{background:#fff;border:1px solid var(--line);border-radius:var(--radius);min-height:160px;display:flex;align-items:center;justify-content:center;padding:26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card-marca:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:#d8dde6}
+.card-marca img{max-width:170px;max-height:96px;width:auto;object-fit:contain}
+
+/* DIFERENCIAIS */
+.grid-dif{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card-dif{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;transition:transform .2s ease,box-shadow .2s ease}
+.card-dif:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.ico{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(15,37,71,.07);color:var(--navy);margin-bottom:16px}
+.ico svg{width:26px;height:26px}
+.card-dif h3{margin:0 0 6px;font-size:1.06rem;font-weight:700;color:var(--navy)}
+.card-dif p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* ATENDIMENTO */
+.atendimento{background:linear-gradient(150deg,var(--navy) 0%,var(--navy-soft) 100%);color:#fff;border-radius:22px;padding:44px 38px;position:relative;overflow:hidden}
+.atendimento:after{content:"";position:absolute;right:-60px;bottom:-70px;width:250px;height:250px;border-radius:50%;background:rgba(37,211,102,.16)}
+.atendimento-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .95fr;gap:34px;align-items:center}
+.atendimento h2{color:#fff;margin-top:6px}
+.atendimento p{color:#d5e0f0;margin:0 0 14px}
+.info-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.info-list li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 16px;font-size:.95rem;color:#eaf1fb}
+.info-list svg{width:20px;height:20px;flex:none;color:var(--wa);margin-top:2px}
+.info-list strong{color:#fff}
+
+/* CONTATO */
+.grid-contato{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card-contato{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-align:center;transition:transform .2s ease,box-shadow .2s ease}
+.card-contato:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.card-contato .ico{margin:0 auto 14px}
+.card-contato span{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:700}
+.card-contato a,.card-contato p{display:block;margin:6px 0 0;font-weight:600;color:var(--navy);text-decoration:none;word-break:break-word}
+.card-contato a:hover{color:var(--wa-dark)}
+
+/* FOOTER */
+footer{background:var(--navy-deep);color:#b9c7dd;padding:46px 0 34px;font-size:.92rem}
+footer .brand{color:#fff;font-weight:700;font-size:1.02rem;margin-bottom:6px}
+footer p{margin:5px 0}
+footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.footer-line{border:0;border-top:1px solid rgba(255,255,255,.13);margin:26px 0 18px}
+.footer-small{color:#8fa2bd;font-size:.85rem}
+
+/* FLOAT */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:99;display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:999px;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .18s ease,background .18s ease}
+.wa-float:hover{background:var(--wa-dark);transform:translateY(-3px)}
+.wa-float svg{width:26px;height:26px;flex:none}
+.wa-float .label{font-size:.95rem}
+
+@media (max-width:860px){
+  .perfil{grid-template-columns:1fr;text-align:center;justify-items:center;gap:22px}
+  .perfil-foto img{width:200px;height:240px}
+  .atendimento-inner{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .section{padding:56px 0}
+  .hero{padding:48px 0 60px}
+  .atendimento{padding:32px 22px;border-radius:18px}
+  .btn{width:100%}
+  .wa-float{padding:14px;border-radius:50%}
+  .wa-float .label{display:none}
+}
 </style>
 </head>
 <body>
 
-<header>
-<img class="logo" src="lores.png" alt="LORES Gestão de Marcas">
-<h1 class="sr-only">LORES | Gestão de Marcas</h1>
-<p class="tagline">Construindo marcas fortes. Desenvolvendo lojistas de sucesso.</p>
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="logo-chip"><img src="lores.png" alt="LORES Gestão de Marcas"></div>
+    <h1>Construindo marcas fortes.<br>Desenvolvendo lojistas de sucesso.</h1>
+    <p class="tagline">Representação e gestão de marcas de moda infantil no Sul de Minas Gerais.</p>
+    <p class="sub">Levamos marcas consolidadas até a sua loja com um atendimento próximo, consultivo e humano — do primeiro pedido ao pós-venda.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/553591453217"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.67.81-.82.97-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.26-.75-.68-1.19-1.4-1.31-1.65-.13-.24-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.53c.12.17 1.7 2.6 4.11 3.65.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.4-.57 1.6-1.13.2-.55.2-1.02.14-1.12-.06-.11-.22-.17-.47-.29z"/></svg> Falar com um consultor</a>
+      <a class="btn btn-ghost" href="#marcas">Ver marcas representadas</a>
+    </div>
+    <div class="hero-badges">
+      <span><i class="dot"></i> Vendas no atacado para lojistas</span>
+      <span><i class="dot"></i> Sul de Minas Gerais</span>
+      <span><i class="dot"></i> Atendimento consultivo</span>
+    </div>
+  </div>
 </header>
 
 <main>
 
-<section>
-<h2>Sobre nós</h2>
-<div class="sobre">
-<div class="sobre-foto">
-<img src="rodrigo.jpg" alt="Rodrigo Costa - LORES Gestao de Marcas">
-<span class="nome">Rodrigo Costa</span>
-<span class="cargo">LORES | Gestão de Marcas</span>
-</div>
-<div class="sobre-texto">
-<p>A LORES é uma empresa de representação e gestão de marcas de moda infantil que atua junto a lojistas do Sul de Minas Gerais, levando marcas consolidadas e um atendimento próximo, consultivo e humano.</p>
-<p>Quem atende você é <strong>Rodrigo Costa</strong>, responsável pela LORES | Gestão de Marcas, do primeiro contato e da apresentação das coleções ao acompanhamento pós-venda. Empresa sediada em Pouso Alegre - MG.</p>
-</div>
-</div>
-
-<h3>Nossa Missão</h3>
-<p>Conectar lojistas às melhores oportunidades do mercado infantil, oferecendo marcas fortes, produtos de alta aceitação e um atendimento próximo, consultivo e humano.</p>
-
-<h3>Nossa Visão</h3>
-<p>Ser referência em gestão de marcas infantis no Sul de Minas, contribuindo para o crescimento sustentável dos nossos clientes através de um portfólio inteligente e de um relacionamento de longo prazo.</p>
-
-<h3>Nossos Valores</h3>
-<ul class="valores">
-<li>Transparência nas relações comerciais</li>
-<li>Compromisso com resultados</li>
-<li>Respeito aos clientes e parceiros</li>
-<li>Atendimento próximo e personalizado</li>
-<li>Busca constante por inovação</li>
-<li>Crescimento sustentável para todas as partes envolvidas</li>
-</ul>
+<section class="section" id="sobre">
+  <div class="container">
+    <p class="eyebrow">Quem atende você</p>
+    <h2>Atendimento direto, com nome e rosto</h2>
+    <p class="lead">Na LORES você não fala com um call center. O contato é direto com quem conhece as marcas, o mercado e a sua loja.</p>
+    <div class="perfil">
+      <div class="perfil-foto"><img src="rodrigo.jpg" alt="Rodrigo Costa, responsável pela LORES Gestão de Marcas"></div>
+      <div>
+        <h3>Rodrigo Costa</h3>
+        <p class="cargo">Responsável pela LORES | Gestão de Marcas</p>
+        <p>Acompanho o lojista em todas as etapas: apresentação das coleções, montagem do mix de produtos, negociação, entrega e pós-venda. O objetivo nunca é só vender uma coleção — é fazer o produto girar na sua loja.</p>
+        <p class="local">📍 Pouso Alegre - MG · Atendimento em todo o Sul de Minas</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Marcas que representamos</h2>
-<div class="marcas">
-<div class="marca">
-<img src="marlan.png" alt="Grupo Marlan">
-</div>
-<div class="marca">
-<img src="pingo-lele.png" alt="Pingo Lelê">
-</div>
-<div class="marca">
-<img src="life-jeans.png" alt="Life Jeans">
-</div>
-</div>
+<section class="section section-alt" id="marcas">
+  <div class="container center">
+    <p class="eyebrow">Portfólio</p>
+    <h2>Marcas que representamos</h2>
+    <p class="lead">Um portfólio selecionado de marcas de moda infantil com alta aceitação e giro comprovado.</p>
+    <div class="grid-marcas">
+      <div class="card-marca"><img src="marlan.png" alt="Grupo Marlan - Marlan, Milli&amp;Nina e Ioluigi"></div>
+      <div class="card-marca"><img src="pingo-lele.png" alt="Pingo Lelê"></div>
+      <div class="card-marca"><img src="life-jeans.png" alt="Life Jeans"></div>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>O diferencial da LORES</h2>
-<p>Enquanto muitos representantes apenas apresentam coleções, a LORES trabalha para que o cliente tenha sucesso na venda. Oferecemos:</p>
-<ul class="diferenciais">
-<li>Curadoria de marcas</li>
-<li>Apoio na formação do mix de produtos</li>
-<li>Análise de oportunidades de mercado</li>
-<li>Acompanhamento pós-venda</li>
-<li>Suporte para ações promocionais</li>
-<li>Materiais para redes sociais</li>
-<li>Ideias para vitrines e exposição de produtos</li>
-<li>Estratégias para aumento de giro de estoque</li>
-<li>Relacionamento direto com as indústrias representadas</li>
-</ul>
+<section class="section" id="diferenciais">
+  <div class="container center">
+    <p class="eyebrow">Por que a LORES</p>
+    <h2>O diferencial da LORES</h2>
+    <p class="lead">Enquanto muitos representantes apenas apresentam coleções, a LORES trabalha para que o lojista tenha sucesso na venda.</p>
+    <div class="grid-dif" style="text-align:left">
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6 .9-4.4 4.2 1 6-5.3-2.9-5.3 2.9 1-6L3.3 9.4l6-.9L12 3z"/></svg></div>
+        <h3>Curadoria de marcas</h3>
+        <p>Seleção criteriosa de marcas que combinam com o perfil e o público da sua loja.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Mix de produtos</h3>
+        <p>Apoio na formação do mix ideal, equilibrando entrada, básicos e peças de maior valor.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Análise de mercado</h3>
+        <p>Leitura de oportunidades e tendências para você comprar com mais segurança.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2M21 12a9 9 0 0 1-15.5 6.2"/><path d="M18 3v3.5h-3.5M6 21v-3.5h3.5"/></svg></div>
+        <h3>Giro de estoque</h3>
+        <p>Estratégias para acelerar a saída dos produtos e liberar capital de giro.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l2-5h14l2 5v2H3V9z"/><path d="M5 11v9h14v-9"/><path d="M9 20v-5h6v5"/></svg></div>
+        <h3>Vitrines e exposição</h3>
+        <p>Ideias práticas de vitrine e disposição das peças para valorizar a coleção.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.4 10.8l7.2-4.2M8.4 13.2l7.2 4.2"/></svg></div>
+        <h3>Redes sociais</h3>
+        <p>Materiais e conteúdos das marcas para você divulgar e vender também no digital.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l13-6v14L3 13v-2z"/><path d="M6 13v5a2 2 0 0 0 4 0v-3.6"/><path d="M19 9.5a3 3 0 0 1 0 5"/></svg></div>
+        <h3>Ações promocionais</h3>
+        <p>Suporte na criação de campanhas e datas comemorativas para o seu ponto de venda.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Pós-venda de verdade</h3>
+        <p>Acompanhamento após a entrega: conferência, reposição e solução de qualquer ajuste.</p>
+      </div>
+
+      <div class="card-dif">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6-3v4l6-3v4l6-3v13H3z"/><path d="M8 21v-5h4v5"/></svg></div>
+        <h3>Ligação com as indústrias</h3>
+        <p>Relacionamento direto com as fábricas representadas, agilizando prazos e demandas.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Atendimento</h2>
-<p>Nosso atendimento no WhatsApp conta com um assistente automático que responde dúvidas iniciais a qualquer hora do dia. Sempre que você preferir, o atendimento é transferido para uma pessoa da equipe.</p>
-<div class="aviso">
-<p><strong>Horário de atendimento humano:</strong> segunda a sexta, das 8h às 18h.</p>
-<p>Vendas exclusivamente no atacado, para lojistas.</p>
-</div>
-<p><a class="btn-whats" href="https://wa.me/553591453217">Falar no WhatsApp</a></p>
+<section class="section section-alt" id="atendimento">
+  <div class="container">
+    <div class="atendimento">
+      <div class="atendimento-inner">
+        <div>
+          <p class="eyebrow" style="color:#7ee2a8">Atendimento</p>
+          <h2>Rápido no WhatsApp, humano quando importa</h2>
+          <p>Nosso WhatsApp conta com um assistente automático que responde às dúvidas iniciais a qualquer hora do dia. Sempre que você preferir, a conversa é transferida para uma pessoa da equipe.</p>
+          <ul class="info-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Atendimento humano:</strong> segunda a sexta, das 8h às 18h.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Assistente automático:</strong> disponível 24 horas para as primeiras informações.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><strong>Vendas exclusivamente no atacado</strong>, para lojistas.</div></li>
+          </ul>
+        </div>
+        <div style="text-align:center">
+          <a class="btn btn-wa" href="https://wa.me/553591453217"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.67.81-.82.97-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.26-.75-.68-1.19-1.4-1.31-1.65-.13-.24-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.53c.12.17 1.7 2.6 4.11 3.65.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.4-.57 1.6-1.13.2-.55.2-1.02.14-1.12-.06-.11-.22-.17-.47-.29z"/></svg> Chamar no WhatsApp</a>
+          <p style="margin-top:14px;font-size:.9rem;color:#b8c9e2">+55 35 9145-3217</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Contato</h2>
-<p>WhatsApp: +55 35 9145-3217</p>
-<p>E-mail: <a href="mailto:lores.gestaodemarcas@gmail.com">lores.gestaodemarcas@gmail.com</a></p>
-<p>Instagram: <a href="https://instagram.com/loresgestaodemarcas">@loresgestaodemarcas</a></p>
-<p>Cidade: Pouso Alegre - MG</p>
+<section class="section" id="contato">
+  <div class="container center">
+    <p class="eyebrow">Contato</p>
+    <h2>Fale com a LORES</h2>
+    <p class="lead">Escolha o canal que preferir. Respondemos a todos.</p>
+    <div class="grid-contato">
+      <div class="card-contato">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.67.81-.82.97-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.26-.75-.68-1.19-1.4-1.31-1.65-.13-.24-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.53c.12.17 1.7 2.6 4.11 3.65.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.4-.57 1.6-1.13.2-.55.2-1.02.14-1.12-.06-.11-.22-.17-.47-.29z"/></svg></div>
+        <span>WhatsApp</span>
+        <a href="https://wa.me/553591453217">+55 35 9145-3217</a>
+      </div>
+      <div class="card-contato">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></div>
+        <span>E-mail</span>
+        <a href="mailto:lores.gestaodemarcas@gmail.com">lores.gestaodemarcas@gmail.com</a>
+      </div>
+      <div class="card-contato">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+        <span>Instagram</span>
+        <a href="https://instagram.com/loresgestaodemarcas">@loresgestaodemarcas</a>
+      </div>
+      <div class="card-contato">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <span>Cidade</span>
+        <p>Pouso Alegre - MG</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-<p>LORES | Gestão de Marcas &middot; LORES MODA Representação</p>
-<p>COSTA &amp; BUENO REPRESENTACAO COMERCIAL LTDA &middot; CNPJ 52.953.969/0001-80</p>
-<p>Pouso Alegre - MG</p>
-<p><a href="politica-privacidade.html">Política de Privacidade</a></p>
+  <div class="container">
+    <p class="brand">LORES | Gestão de Marcas</p>
+    <p>LORES MODA Representação · Representação e gestão de marcas de moda infantil</p>
+    <p>COSTA &amp; BUENO REPRESENTACAO COMERCIAL LTDA · CNPJ 52.953.969/0001-80</p>
+    <p>Pouso Alegre - MG · Vendas exclusivamente no atacado, para lojistas</p>
+    <hr class="footer-line">
+    <p class="footer-small"><a href="politica-privacidade.html">Política de Privacidade</a> · <a href="mailto:lores.gestaodemarcas@gmail.com">lores.gestaodemarcas@gmail.com</a></p>
+  </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/553591453217" aria-label="Falar com a LORES no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.19-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.67.81-.82.97-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.26-.75-.68-1.19-1.4-1.31-1.65-.13-.24-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.36 1 2.53c.12.17 1.7 2.6 4.11 3.65.57.25 1.02.4 1.37.51.58.18 1.1.16 1.52.1.46-.07 1.4-.57 1.6-1.13.2-.55.2-1.02.14-1.12-.06-.11-.22-.17-.47-.29z"/></svg><span class="label">Fale com a gente</span></a>
 
 </body>
 </html>
