@@ -26,10 +26,13 @@ h3 + p { margin-top: 4px; }
 .diferenciais li:before { content: "\2713"; color: #128C7E; font-weight: bold; position: absolute; left: 0; }
 .valores { padding-left: 22px; }
 .valores li { margin-bottom: 6px; }
-.perfil { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid #e8e0d2; border-radius: 8px; padding: 20px; }
-.perfil img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 3px solid #e8e0d2; }
-.perfil div { flex: 1 1 260px; }
-.perfil p { margin: 6px 0; }
+.sobre { display: flex; gap: 26px; align-items: flex-start; flex-wrap: wrap; margin-top: 18px; }
+.sobre-foto { flex: 0 0 190px; text-align: center; }
+.sobre-foto img { width: 190px; height: 230px; object-fit: cover; border-radius: 10px; border: 1px solid #e8e0d2; display: block; }
+.sobre-foto .nome { display: block; font-weight: bold; margin-top: 12px; }
+.sobre-foto .cargo { display: block; color: #666; font-size: 0.9em; }
+.sobre-texto { flex: 1 1 300px; }
+.sobre-texto p:first-child { margin-top: 0; }
 .btn-whats { display: inline-block; background: #25D366; color: #fff; text-decoration: none; font-weight: bold; padding: 14px 26px; border-radius: 30px; margin-top: 10px; }
 .aviso { background: #fff; border-left: 4px solid #128C7E; padding: 14px 18px; margin-top: 16px; }
 footer { background: #2b2b2b; color: #cfc9be; text-align: center; padding: 26px 20px; font-size: 0.88em; }
@@ -39,105 +42,105 @@ footer a { color: #fff; }
 <body>
 
 <header>
-  <img class="logo" src="lores.png" alt="LORES Gestão de Marcas">
-  <h1 class="sr-only">LORES | Gestão de Marcas</h1>
-  <p class="tagline">Construindo marcas fortes. Desenvolvendo lojistas de sucesso.</p>
+<img class="logo" src="lores.png" alt="LORES Gestão de Marcas">
+<h1 class="sr-only">LORES | Gestão de Marcas</h1>
+<p class="tagline">Construindo marcas fortes. Desenvolvendo lojistas de sucesso.</p>
 </header>
 
 <main>
 
-  <section>
-    <h2>Sobre nós</h2>
-    <p>A LORES é uma empresa de representação e gestão de marcas de moda infantil que atua junto a lojistas do Sul de Minas Gerais, levando marcas consolidadas e um atendimento próximo, consultivo e humano.</p>
+<section>
+<h2>Sobre nós</h2>
+<div class="sobre">
+<!-- FOTO: quando a foto profissional for enviada, remover os comentarios abaixo
+<div class="sobre-foto">
+<img src="rodrigo.jpg" alt="Rodrigo Costa - LORES Gestao de Marcas">
+<span class="nome">Rodrigo Costa</span>
+<span class="cargo">LORES | Gestão de Marcas</span>
+</div>
+-->
+<div class="sobre-texto">
+<p>A LORES é uma empresa de representação e gestão de marcas de moda infantil que atua junto a lojistas do Sul de Minas Gerais, levando marcas consolidadas e um atendimento próximo, consultivo e humano.</p>
+<p>Quem atende você é <strong>Rodrigo Costa</strong>, responsável pela LORES | Gestão de Marcas, do primeiro contato e da apresentação das coleções ao acompanhamento pós-venda. Empresa sediada em Pouso Alegre - MG.</p>
+</div>
+</div>
 
-    <h3>Nossa Missão</h3>
-    <p>Conectar lojistas às melhores oportunidades do mercado infantil, oferecendo marcas fortes, produtos de alta aceitação e um atendimento próximo, consultivo e humano.</p>
+<h3>Nossa Missão</h3>
+<p>Conectar lojistas às melhores oportunidades do mercado infantil, oferecendo marcas fortes, produtos de alta aceitação e um atendimento próximo, consultivo e humano.</p>
 
-    <h3>Nossa Visão</h3>
-    <p>Ser referência em gestão de marcas infantis no Sul de Minas, contribuindo para o crescimento sustentável dos nossos clientes através de um portfólio inteligente e de um relacionamento de longo prazo.</p>
+<h3>Nossa Visão</h3>
+<p>Ser referência em gestão de marcas infantis no Sul de Minas, contribuindo para o crescimento sustentável dos nossos clientes através de um portfólio inteligente e de um relacionamento de longo prazo.</p>
 
-    <h3>Nossos Valores</h3>
-    <ul class="valores">
-      <li>Transparência nas relações comerciais</li>
-      <li>Compromisso com resultados</li>
-      <li>Respeito aos clientes e parceiros</li>
-      <li>Atendimento próximo e personalizado</li>
-      <li>Busca constante por inovação</li>
-      <li>Crescimento sustentável para todas as partes envolvidas</li>
-    </ul>
-  </section>
+<h3>Nossos Valores</h3>
+<ul class="valores">
+<li>Transparência nas relações comerciais</li>
+<li>Compromisso com resultados</li>
+<li>Respeito aos clientes e parceiros</li>
+<li>Atendimento próximo e personalizado</li>
+<li>Busca constante por inovação</li>
+<li>Crescimento sustentável para todas as partes envolvidas</li>
+</ul>
+</section>
 
-  <section>
-    <h2>Quem atende você</h2>
-    <div class="perfil">
-      <!-- FOTO: quando a foto profissional for enviada, inserir aqui: <img src="rodrigo.jpg" alt="Rodrigo Costa - LORES Gestao de Marcas"> -->
-      <div>
-        <p><strong>Rodrigo Costa</strong></p>
-        <p>Responsável pela LORES | Gestão de Marcas. Atendimento direto ao lojista, da apresentação das coleções ao acompanhamento pós-venda.</p>
-        <p>Pouso Alegre - MG</p>
-      </div>
-    </div>
-  </section>
+<section>
+<h2>Marcas que representamos</h2>
+<div class="marcas">
+<div class="marca">
+<img src="marlan.png" alt="Grupo Marlan - moda que veste criança">
+<strong>Grupo Marlan</strong>
+</div>
+<div class="marca">
+<img src="pingo-lele.png" alt="Pingo Lelê">
+<strong>Pingo Lelê</strong>
+</div>
+<div class="marca">
+<img src="life-jeans.png" alt="Life Jeans">
+<strong>Life Jeans</strong>
+</div>
+</div>
+</section>
 
-  <section>
-    <h2>Marcas que representamos</h2>
-    <div class="marcas">
-      <div class="marca">
-        <img src="marlan.png" alt="Grupo Marlan - moda que veste criança">
-        <strong>Grupo Marlan</strong>
-      </div>
-      <div class="marca">
-        <img src="pingo-lele.png" alt="Pingo Lelê">
-        <strong>Pingo Lelê</strong>
-      </div>
-      <div class="marca">
-        <img src="life-jeans.png" alt="Life Jeans">
-        <strong>Life Jeans</strong>
-      </div>
-    </div>
-  </section>
+<section>
+<h2>O diferencial da LORES</h2>
+<p>Enquanto muitos representantes apenas apresentam coleções, a LORES trabalha para que o cliente tenha sucesso na venda. Oferecemos:</p>
+<ul class="diferenciais">
+<li>Curadoria de marcas</li>
+<li>Apoio na formação do mix de produtos</li>
+<li>Análise de oportunidades de mercado</li>
+<li>Acompanhamento pós-venda</li>
+<li>Suporte para ações promocionais</li>
+<li>Materiais para redes sociais</li>
+<li>Ideias para vitrines e exposição de produtos</li>
+<li>Estratégias para aumento de giro de estoque</li>
+<li>Relacionamento direto com as indústrias representadas</li>
+</ul>
+</section>
 
-  <section>
-    <h2>O diferencial da LORES</h2>
-    <p>Enquanto muitos representantes apenas apresentam coleções, a LORES trabalha para que o cliente tenha sucesso na venda. Oferecemos:</p>
-    <ul class="diferenciais">
-      <li>Curadoria de marcas</li>
-      <li>Apoio na formação do mix de produtos</li>
-      <li>Análise de oportunidades de mercado</li>
-      <li>Acompanhamento pós-venda</li>
-      <li>Suporte para ações promocionais</li>
-      <li>Materiais para redes sociais</li>
-      <li>Ideias para vitrines e exposição de produtos</li>
-      <li>Estratégias para aumento de giro de estoque</li>
-      <li>Relacionamento direto com as indústrias representadas</li>
-    </ul>
-  </section>
+<section>
+<h2>Atendimento</h2>
+<p>Nosso atendimento no WhatsApp conta com um assistente automático que responde dúvidas iniciais a qualquer hora do dia. Sempre que você preferir, o atendimento é transferido para uma pessoa da equipe.</p>
+<div class="aviso">
+<p><strong>Horário de atendimento humano:</strong> segunda a sexta, das 8h às 18h.</p>
+<p>Vendas exclusivamente no atacado, para lojistas.</p>
+</div>
+<p><a class="btn-whats" href="https://wa.me/553591453217">Falar no WhatsApp</a></p>
+</section>
 
-  <section>
-    <h2>Atendimento</h2>
-    <p>Nosso atendimento no WhatsApp conta com um assistente automático que responde dúvidas iniciais a qualquer hora do dia. Sempre que você preferir, o atendimento é transferido para uma pessoa da equipe.</p>
-    <div class="aviso">
-      <p><strong>Horário de atendimento humano:</strong> segunda a sexta, das 8h às 18h.</p>
-      <p>Vendas exclusivamente no atacado, para lojistas.</p>
-    </div>
-    <p><a class="btn-whats" href="https://wa.me/553591453217">Falar no WhatsApp</a></p>
-  </section>
-
-  <section>
-    <h2>Contato</h2>
-    <p>WhatsApp: +55 35 9145-3217</p>
-    <p>E-mail: <a href="mailto:lores.gestaodemarcas@gmail.com">lores.gestaodemarcas@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/loresgestaodemarcas">@loresgestaodemarcas</a></p>
-    <p>Cidade: Pouso Alegre - MG</p>
-  </section>
+<section>
+<h2>Contato</h2>
+<p>WhatsApp: +55 35 9145-3217</p>
+<p>E-mail: <a href="mailto:lores.gestaodemarcas@gmail.com">lores.gestaodemarcas@gmail.com</a></p>
+<p>Instagram: <a href="https://instagram.com/loresgestaodemarcas">@loresgestaodemarcas</a></p>
+<p>Cidade: Pouso Alegre - MG</p>
+</section>
 
 </main>
 
 <footer>
-  <p>LORES | Gestão de Marcas &middot; LORES MODA Representação</p>
-  <p>COSTA &amp; BUENO REPRESENTACAO COMERCIAL LTDA &middot; CNPJ 52.953.969/0001-80</p>
-  <p>Pouso Alegre - MG</p>
-  <p><a href="politica-privacidade.html">Política de Privacidade</a></p>
+<p>LORES | Gestão de Marcas &middot; LORES MODA Representação</p>
+<p>COSTA &amp; BUENO REPRESENTACAO COMERCIAL LTDA &middot; CNPJ 52.953.969/0001-80</p>
+<p>Pouso Alegre - MG</p>
+<p><a href="politica-privacidade.html">Política de Privacidade</a></p>
 </footer>
 
 </body>
